@@ -1,0 +1,23 @@
+# Desensitised sample output from verify_browser_config_levels.sh
+# (run against a sandbox account, us-west-2, 2026-10). Account IDs removed.
+
+=== Parameters accepted by CreateBrowser (control plane) ===
+--browser-signing
+--certificates
+--enterprise-policies
+--network-configuration
+--recording
+# note: NO --extensions
+
+=== Parameters accepted by StartBrowserSession (data plane) ===
+--certificates
+--enterprise-policies
+--extensions
+--profile-configuration
+--proxy-configuration
+
+=== Live proof: CreateBrowser rejects 'extensions' (session-only config) ===
+Parameter validation failed:
+Unknown parameter in input: "extensions", must be one of: name, description,
+executionRoleArn, networkConfiguration, recording, browserSigning,
+enterprisePolicies, certificates, clientToken, tags
